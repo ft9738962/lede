@@ -1,6 +1,6 @@
-欢迎来到Lean的Openwrt源码仓库！
+本仓库是l大lede的自动编译仓库
 =
-Welcome to Lean's  git source of OpenWrt and packages
+Welcome to automation CI of Lean's lede source code
 =
 中文：如何编译自己需要的 OpenWrt 固件
 -
