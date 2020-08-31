@@ -43,6 +43,19 @@ jobs:
           sudo -E apt-get clean
 
           df -h
+          
+      - name: Update latest source code
+        run: |
+          git remote add openwrt https://github.com/coolsnowwolf/lede.git
+          git pull openwrt master
+          git remote -v
+          
+      - name: Add Rosy theme
+        run: |
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/rosywrt/luci-theme-rosy.git
 
       - name: Update feeds
         run: |
