@@ -105,11 +105,7 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          CONFIG_TARGET_x86_64_DEVICE_generic=y
           CONFIG_TARGET_ROOTFS_EXT4FS=y
-          CONFIG_TARGET_EXT4_RESERVED_PCT=0
-          CONFIG_TARGET_EXT4_BLOCKSIZE_4K=y
-          CONFIG_TARGET_EXT4_BLOCKSIZE=4096
           EOF
           # 固件压缩:
           cat >> .config <<EOF
@@ -182,11 +178,6 @@ jobs:
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
-          EOF
-          # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
-          cat >> .config <<EOF
-          # # CONFIG_TARGET_IMAGES_PAD is not set
-          CONFIG_VMDK_IMAGES=y
           EOF
           # 
           # ========================固件定制部分结束========================
