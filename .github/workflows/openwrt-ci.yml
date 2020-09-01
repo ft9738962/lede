@@ -105,14 +105,19 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          CONFIG_TARGET_ROOTFS_EXT4FS=y
+          CONFIG_TARGET_EXT4_RESERVED_PCT=0
+          CONFIG_TARGET_EXT4_BLOCKSIZE_4K=y
+          CONFIG_TARGET_EXT4_BLOCKSIZE=4096
           EOF
           # 固件压缩:
           cat >> .config <<EOF
           CONFIG_TARGET_IMAGES_GZIP=y
           EOF
-          # 编译UEFI固件:
+          # 编译VMDK固件:
           cat >> .config <<EOF
-          CONFIG_EFI_IMAGES=y
+          CONFIG_VMDK_IMAGES=y
           EOF
           # IPv6支持:
           cat >> .config <<EOF
